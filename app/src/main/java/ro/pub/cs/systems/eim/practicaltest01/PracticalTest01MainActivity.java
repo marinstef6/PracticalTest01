@@ -28,7 +28,7 @@ public class PracticalTest01MainActivity extends AppCompatActivity {
             if (view.getId() == R.id.navigate_to_secondary_activity_button) {
                 textsum = left+right;
                 Intent intent = new Intent(getApplicationContext(), PracticalTest01SecondaryActivity.class);
-                //aici a trebuit sa fac suma lor
+                //pentru ca mai sus suma mea este int altfel fac conversie ( intent.putExtra("NUMBER_OF_CLICKS", Integer.parseInt(text1.getText().toString()));)
                 intent.putExtra(Constants.NUMBER_OF_CLICKS, textsum);
                 //cere un int aceasta metoda de aia trebuie sa am secondary cu int
                 startActivityForResult(intent, Constants.SECONDARY_ACTIVITY_REQUEST_CODE);
